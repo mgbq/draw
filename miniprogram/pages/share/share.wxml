@@ -1,0 +1,62 @@
+<view class="container">
+	<view class="page-body">
+		<block wx:if="{{showComfirm}}">
+			<view class="comfirm-background"></view>
+			<view class="comfirm-cell">
+				<view class="comfirm-content">
+					<block wx:if="{{canIUse}}">
+						<view class="comfirm-text">
+							<view>需要获取您的头像和昵称</view>
+						</view>
+						<view class="comfirm-btn-cell">
+							<button bindgetuserinfo="bindGetUserInfo" class="comfirm-btn-ok" openType="getUserInfo">确定</button>
+							<button bindtap="clickCancelComfirm" class="comfirm-btn-cancel" type="default">取消</button>
+						</view>
+					</block>
+					<block wx:else>
+						<view>请升级微信版本</view>
+						<view class="comfirm-btn-cell">
+							<button bindtap="clickCancelComfirm" class="comfirm-btn-ok" type="default">确定</button>
+						</view>
+					</block>
+				</view>
+			</view>
+		</block>
+		<block wx:else>
+			<view animation="{{animationData}}" class="draw-cell">
+				<view>
+					<image class="draw-logo-image" mode="aspectFit" src="../../resources/image/logo.png"></image>
+				</view>
+				<block wx:if="{{showResult}}">
+					<view class="draw-title" style="height:400rpx">
+						<view>{{dttitle}}</view>
+						<view style="margin-top:40rpx">{{drawlotsResult.content}}</view>
+					</view>
+					<view bindtap="bindDetail" class="draw-notice">
+						查看更多抽签结果 >
+					</view>
+				</block>
+				<block wx:else>
+					<view class="draw-title" style="height:240rpx">
+						{{title}}
+					</view>
+					<view class="draw-notice">
+						点击“抽”按钮参与抽签
+					</view>
+					<view>
+
+						<image wx:if="{{chouqed}}" bindtap="bindDraw" class="draw-image" mode="aspectFit" src="../../resources/image/draw.png"></image>
+						<image wx:else class="draw-image" mode="aspectFit" src="../../resources/image/draw.png"></image>
+					</view>
+				</block>
+			</view>
+			<view bindtap="bindToHome" class="to-home">
+				发起抽签 >
+			</view>
+			<view class="ad-cell">
+				<ad unitId="adunit-d59f6bdb69606c6b"></ad>
+			</view>
+		</block>
+	</view>
+</view>
+<loading hidden="{{loadingHidden}}">加载中</loading>

@@ -1,0 +1,202 @@
+page{
+    height: 100%;
+    background-image: url(https://qiniu-koala.kaolalicai.cn/draw_lots_bg.png);
+    background-size: 100%;
+    min-height: 1200rpx;
+}
+.drawlots-cell {
+    padding: 20rpx 20rpx 20rpx 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* background-color: white;
+    border-bottom: 1rpx solid #888888; */
+}
+
+.drawlots-title {
+    border: 1rpx solid #888888;
+    width: 100%;
+    padding-left: 20rpx;
+    padding-top: 8rpx;
+    padding-bottom: 8rpx;
+}
+
+.drawlots-count {
+    border: 1rpx solid #888888;
+    width: 150rpx;
+    padding-left: 20rpx;
+    padding-top: 8rpx;
+    padding-bottom: 8rpx;
+    margin-left: -5rpx;
+}
+
+.drawlots-del-img {
+    height: 50rpx;
+    width: 50rpx;
+    padding-top: 5rpx;
+    padding-bottom: 5rpx;
+}
+
+.drawlots-add-img-cell {
+    padding: 20rpx 20rpx 20rpx 20rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.drawlots-add-img {
+    height: 50rpx;
+    width: 50rpx;
+}
+
+.drawlots-publish-btn {
+    margin-top: 20rpx;
+    width: 60%;
+    background-color: #ff9d01 !important;
+    border-radius: 10rpx;
+    color: white !important;
+
+}
+
+.comfirm-background {
+    opacity: 0.6;
+    z-index: 100;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    background-color: #000000;
+}
+
+.comfirm-cell {
+    opacity: 1;
+    z-index: 101;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.comfirm-content {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 350rpx;
+    background-color: white;
+}
+
+.comfirm-text {
+    padding-top: 80rpx;
+    padding-bottom: 80rpx;
+    text-align: center;
+    font-size: 35rpx;
+}
+
+.comfirm-btn-cell {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: white;
+}
+
+.comfirm-btn-ok {
+    width: 50%;
+    background-color: white;
+    margin-top: 0rpx;
+    margin-bottom: 0rpx;
+    border-radius: 0rpx;
+    color: #ff9d01;
+}
+
+.comfirm-btn-cancel {
+    width: 50%;
+    background-color: white;
+    margin-top: 0rpx;
+    margin-bottom: 0rpx;
+    border-radius: 0rpx;
+    color: red;
+}
+
+.common-drawlots-cell {
+    width: 80%;
+    padding: 30rpx 30rpx 30rpx 30rpx;
+    margin-top: 50rpx;
+    margin-left: auto;
+    margin-right: auto;
+    border: 1rpx solid #ff9d01;
+}
+
+.common-drawlots-title {
+    font-size: 14px;
+    color: #999;
+}
+
+.common-drawlots {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.common-drawlots-item {
+    margin-top: 10rpx;
+    padding: 5rpx 10rpx 5rpx 10rpx;
+    border: 1rpx solid #ff9d01;
+    border-radius: 10rpx;
+    background-color: #ff9d01;
+    color: white;
+}
+
+
+.draw-lots-form {
+    width: 100%;
+}
+
+.draw-lots-form-item {
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 auto 20rpx auto;
+    width: 80%;
+}
+.draw-lots-form-item__label {
+    color: #ff9d01;
+    font-size: 36rpx;
+    font-weight: 700;
+    /* margin-right: 20rpx; */
+}
+
+.draw-lots-form-item__label--mw {
+    min-width: 100rpx;
+}
+
+.draw-lots-form-item__textarea {
+    border: 5rpx solid #ff9d01;
+    border-radius: 20rpx;
+    font-size: 32rpx;
+    box-sizing: border-box;
+    color: #66514e;
+    height: 120rpx;
+    padding: 15rpx;
+    text-align: left;
+    overflow: hidden;
+}
+
+
+.draw-lots-form-item__input {
+    border: 5rpx solid #ff9d01;
+    border-radius: 20rpx;
+    font-size: 32rpx;
+    width: 73rpx;
+    height: 57rpx;
+    /* box-sizing: border-box; */
+    text-align: center;
+    color: #66514e;
+}
+.draw-lots-form-item__input--lg {
+    width: 449rpx;
+}

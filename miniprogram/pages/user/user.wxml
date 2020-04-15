@@ -1,0 +1,37 @@
+<view class="container">
+    <loading hidden="{{loadingHidden}}">加载中</loading>
+    <view class="page-head">
+        <view class="page-head-info" wx:if="{{hasUserInfo===true}}">
+            <image class="userinfo-avatar" src="{{userInfo.icon}}"></image>
+            <view style="width:100%">
+                <button class="btn-50 userinfo-button" disabled="true" style="color:black">{{userInfo.username}}</button>
+            </view>
+        </view>
+        <view class="page-head-info" style="margin-top: 180rpx" wx:else>
+            <image class="userinfo-avatar" src="../../resources/image/user_icon.png"></image>
+            <view style="width:100%" wx:if="{{canIUse}}">
+                <button bindgetuserinfo="bindGetUserInfo" class="btn-50" openType="getUserInfo">点击登录</button>
+            </view>
+            <view wx:else>请升级微信版本</view>
+        </view>
+    </view>
+    <view class="page-body">
+        <view class="weui-cells" wx:if="{{hasUserInfo===true}}">
+            <navigator class="navigator" url="./create/create">
+                <view class="navigator-text">我发起的</view>
+                <view class="navigator-arrow"></view>
+            </navigator>
+              <view class="navigator">
+                <view class="navigator-text">bug联系作者wx:   mg18124008870</view>
+            </view>
+            <!-- <navigator class="navigator" url="./history/history">
+                <view class="navigator-text">参与过的</view>
+                <view class="navigator-arrow"></view>
+            </navigator>
+            <navigator class="navigator" url="./question/question">
+                <view class="navigator-text">问题反馈</view>
+                <view class="navigator-arrow"></view>
+            </navigator> -->
+        </view>
+    </view>
+</view>

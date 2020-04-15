@@ -1,0 +1,41 @@
+@import "../../style/weui.wxss";
+
+.page-head-info {
+    padding-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.userinfo-avatar {
+    border-radius: 128rpx;
+    width: 128rpx;
+    height: 128rpx;
+}
+
+.userinfo-nickname {
+    margin-top: 20rpx;
+    font-size: 38rpx;
+}
+
+.userinfo-button {
+    border: none;
+}
+
+button[class="btn-50 userinfo-button"]::after {
+    border: 0;
+}
+
+button[class="question-btn"]::after {
+    border: 0;
+}
+
+button[class="question-btn"],button[class="question-btn button-hover"] {
+    background-color: #fff;
+    border: none;
+    padding: 0;
+    margin: 0;
+    line-height: 1.4;
+    text-align: left;
+    border: 0;
+}

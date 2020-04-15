@@ -1,0 +1,39 @@
+<view class="container">
+	<loading hidden="{{loading_hidden}}">加载中</loading>
+	<view class="page-head">
+		<view>{{title}}</view>
+	</view>
+	<view class="page-body">
+		<view class="weui-cells-title">
+			抽签结果
+		</view>
+		<view class="weui-cells">
+			<view class="weui-cell result-item" wx:for="{{drawlots_result_list}}">
+				<view class="result-user">
+					<view>
+						<image class="result-usericon" src="{{item.icon}}"></image>
+					</view>
+					<view>
+						<view class="result-username">{{item.username}}</view>
+						<view class="result-time">{{item.create_time}}</view>
+					</view>
+				</view>
+				<view>
+					{{item.content}}
+				</view>
+			</view>
+		</view>
+		<view style=" text-align: center;">
+			<view bindtap="bindTochouqian" class="to-home">
+				抽签页面 >
+			</view>
+			<view bindtap="bindToHome" class="to-home">
+				发起抽签 >
+			</view>
+		</view>
+
+		<view class="ad-cell">
+			<ad unitId="adunit-d59f6bdb69606c6b"></ad>
+		</view>
+	</view>
+</view>

@@ -1,0 +1,43 @@
+<view class="container">
+    <view class="page-body">
+        <view class="weui-cells-title">
+            问题描述
+        </view>
+        <view class="weui-cells">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <textarea bindinput="bindInputContent" class="weui-textarea" placeholder="请填写问题描述" style="height: 5em" value="{{content}}"></textarea>
+                </view>
+            </view>
+        </view>
+        <view class="weui-cells-title">
+            相关图片
+        </view>
+        <view class="weui-cells">
+            <view class="weui-cell">
+                <view class="weui-cell__bd">
+                    <view class="weui-uploader">
+                        <view class="weui-uploader__bd">
+                            <view class="weui-uploader__files">
+                                <view class="weui-uploader__file" wx:for="{{image_list}}" wx:for-item="image">
+                                    <view class="image-cell">
+                                        <view bindtap="delImg" data-index="{{index}}">
+                                            <image class="del-img-btn" src="/resources/image/del-img.png"></image>
+                                        </view>
+                                        <image bindtap="previewImage" class="weui-uploader__img" data-src="{{image}}" src="{{image}}"></image>
+                                    </view>
+                                </view>
+                            </view>
+                            <view class="weui-uploader__input-box image-cell" wx:if="{{image_list.length<4}}">
+                                <view bindtap="chooseImage" class="weui-uploader__input"></view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view bindtap="bindSubmit" class="submit-btn">
+            <view class="submit-text">提交</view>
+        </view>
+    </view>
+</view>

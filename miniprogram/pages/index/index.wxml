@@ -1,0 +1,46 @@
+<view class="container">
+	<block wx:if="{{showComfirm}}">
+		<view class="comfirm-background"></view>
+		<view class="comfirm-cell">
+			<view class="comfirm-content">
+				<view class="comfirm-text">
+					<view>是否邀请好友参加抽签？</view>
+				</view>
+				<view class="comfirm-btn-cell">
+					<button class="comfirm-btn-ok" openType="share">是</button>
+					<button bindtap="clickCancelComfirm" class="comfirm-btn-cancel">否</button>
+				</view>
+			</view>
+		</view>
+	</block>
+	<view class="page-body" wx:else>
+
+		<view class="draw-lots-form-item" style="margin-top:20px;margin-left:9px;">
+			<view class="draw-lots-form-item__label draw-lots-form-item__label--mw">主题</view>
+			<textarea bindinput="inputTitle" class="draw-lots-form-item__textarea" name="title" placeholder="煮饭炒菜分工抽签" value="{{drawlotsData.title}}"></textarea>
+		</view>
+
+
+		<view>
+			<view class="drawlots-cell" wx:for="{{drawlotsData.detail}}" wx:key="*this">
+				<!--placeholder="抽签项 {{index+1}}"-->
+				<input bindblur='bindblur' bindinput="inputContent" class="drawlots-content draw-lots-form-item__input draw-lots-form-item__input--lg mr-10" data-index="{{index}}" type="text" value="{{item.content}}"></input>
+				<!-- <input bindinput="inputCount" class="drawlots-count" data-index="{{index}}" placeholder="抽签数" type="number" value="{{item.count}}"></input> -->
+				<image bindtap="bindDel" class="drawlots-del-img" data-index="{{index}}" src="https://qiniu-koala.kaolalicai.cn/draw_lots_delete_icon.png"></image>
+			</view>
+		</view>
+		<view class="drawlots-add-img-cell">
+			<image bindtap="bindAdd" class="drawlots-add-img" src="/resources/image/addbutton.png"></image> <text bindtap="bindAdd" style="margin-left:10rpx;"> 添加选项</text>
+		</view>
+		<view>
+			<button catchtap="clickPublish"  class="drawlots-publish-btn" type="primary">发起抽签</button>
+		</view>
+		<view class="common-drawlots-cell">
+			<view class="common-drawlots-title">常用抽签</view>
+			<view class="common-drawlots">
+				<view bindtap="bindCommonDrawlots" class="common-drawlots-item" data-index="{{index}}" wx:for="{{commonDrawlots}}">{{item}}</view>
+			</view>
+		</view>
+	</view>
+</view>
+<loading hidden="{{loadingHidden}}">加载中</loading>

@@ -1,0 +1,36 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/share/share",
+    "pages/user/user",
+    "pages/user/history/history",
+    "pages/user/detail/detail",
+    "pages/user/question/question",
+    "pages/user/create/create"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "邵东大鲨鱼抽签工具",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "selectedColor":"#ff9d01",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "resources/image/kind_gray.png",
+        "selectedIconPath": "resources/image/kind.png"
+      },
+      {
+        "pagePath": "pages/user/user",
+        "text": "我的",
+        "iconPath": "resources/image/user_gray.png",
+        "selectedIconPath": "resources/image/user.png"
+      }
+    ]
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json"
+}

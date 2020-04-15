@@ -1,0 +1,47 @@
+.result-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.result-user {
+    display: flex;
+    flex-direction: row;
+}
+
+.result-usericon {
+    border-radius: 10rpx;
+    width: 80rpx;
+    height: 80rpx;
+}
+
+.result-username {
+    padding-left: 20rpx;
+}
+
+.result-time {
+    padding-left: 20rpx;
+    color: #999;
+}
+
+.weui-cells {
+    margin-top: 0rpx;
+    margin-bottom: 0rpx;
+}
+
+.weui-cells-title {
+    margin-top: 10rpx;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #999;
+    font-size: 14px;
+}
+
+.to-home {
+    font-size: 25rpx;
+    display: initial;
+    padding: 10px;    
+    color: #333333;
+    margin-top: 30rpx;
+    margin-bottom: 30rpx;
+}

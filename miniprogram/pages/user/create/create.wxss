@@ -1,0 +1,18 @@
+.weui-cells {
+    margin-top: 0rpx;
+}
+
+.weui-cells-title {
+    margin-top: 25rpx;
+    margin-bottom: 5rpx;
+    padding-left: 15px;
+    padding-right: 15px;
+    color: #999;
+    font-size: 14px;
+}
+
+.view_item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}

@@ -1,0 +1,13 @@
+<view class="container">
+    <view class="page-body">
+        <view class="weui-cells-title">
+            我发起的
+        </view>
+        <view class="weui-cells">
+            <view bindtap="bindDetail" class="weui-cell view_item" data-drawlots_id="{{item._id}}" wx:for="{{drawlots_list}}">
+                <view style="width: 500rpx">{{item.title}}</view>
+                <view style="width: 200rpx">{{item.create_time}}</view>
+            </view>
+        </view>
+    </view>
+</view>
